@@ -1,0 +1,22 @@
+/*Seccion Acerca de mi */
+.about.border.border-dark { 
+    margin-top:auto;
+    color:#ffffffb9;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    box-shadow: 0.625rem 0.313rem 0.313rem #000000;   
+}
+.about.border.border-dark:hover {
+    box-shadow: 0.625rem 0.313rem 0.313rem #0044ff;   
+}
+/* foto de perfil */
+.rounded-circle.w-100.border.border-3 {
+    width: 14rem!important;
+    margin-top: -7.5rem;
+    margin-left: -6rem;
+    transform:rotate(-20deg);
+    background-color:#000000;
+    border-color:#f5f5f5a1 !important;
+}
+h2 {
+    color:#000000;
+}

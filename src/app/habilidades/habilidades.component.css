@@ -1,0 +1,18 @@
+/*Seccion habilidades*/
+.skills.border.border-dark {
+    color:#000000;
+     background-color: #0077c0;
+    border-radius:3rem;
+    box-shadow: 0.625rem 0.313rem 0.313rem #000000;
+    margin:0.8rem; 
+    }
+    .skills.border.border-dark:hover{
+        box-shadow: 0.625rem 0.313rem 0.313rem #0044ff;   
+    }
+
+.progress-bar.progress-bar-striped.progress-bar-animated {
+    background: #00d4ff;
+    background: linear-gradient(0deg, #00d4ff 0%, #2418d6 22%, #0a1077 81%, #00d4ff 100%);
+color:#ffffff;
+font-size:large;
+}

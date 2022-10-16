@@ -1,0 +1,10 @@
+i.fa-solid.fa-user-check.fa-2xl {
+    color: #fff;
+}
+i.fa-solid.fa-user-check.fa-2xl:hover {
+    color:#7fc1ff;
+    }
+    ul.list-group{
+        --bs-list-group-bg: transparent;
+    } 
+    

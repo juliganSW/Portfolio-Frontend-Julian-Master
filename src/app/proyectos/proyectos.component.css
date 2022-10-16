@@ -1,0 +1,19 @@
+/*Seccion Proyectos*/
+.projects.border.border-dark{
+    color:#ffffffb9;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    border-radius:3rem;
+    box-shadow: 0.625rem 0.313rem 0.313rem #000000;
+    margin:0.8rem; 
+   }
+.projects.border.border-dark:hover {
+    box-shadow: 0.625rem 0.313rem 0.313rem #0044ff;   
+}
+.project-img {
+    box-shadow: 0.325rem 0.313rem 0.313rem #ffffff;
+    width:9rem;
+    
+}
+h2 {
+    color: #ffffff;
+}

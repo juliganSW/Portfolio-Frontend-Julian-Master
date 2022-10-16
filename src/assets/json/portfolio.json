@@ -1,0 +1,137 @@
+{
+  "nombre": "Julian",
+  "apellido": "Piedrabuena",
+  "saludo": "Bienvenido",
+  "ocupacion":  "Desarrollador web full stack jr.",
+
+  "titulo": "Acerca de mi",
+  "descripcion": "Soy un desarrollador web full stack que posee excelentes habilidades de análisis, planificacion y trabajo en equipo. Además soy una persona muy detallista y meticulosa en lo que al diseño respecta. Busco un ambiente de trabajo desafiante que me permita desplegar mi creatividad, y en el que pueda continuar adquiriendo conocimientos en el apasionante mundo de la programacion.",
+  "img": "assets/img/IMG_20170321_044918_preview_rev_1.png",
+
+  "detalle":"Proyecto Portfolio web Argentina programa 2022",
+  "imagen": "assets/img/MINIATURA-ARGEPROGR.jpg",
+    
+  
+
+  "educacion": [
+    {
+      "id":1,
+      "institucion": "Colegio Nacional Nº19 Luis Pasteur.",
+      "titulo": "Bachiller con orientacion en ciencias sociales y humanidades-Ciencias Naturales",
+      "inicio": "1994",
+      "fin": "1998",
+      "img":"assets/img/Colegio19medalla.jpg"
+    },
+
+    {
+      "id":2,
+      "institucion": "Facultad de ciencias veterinarias UBA",
+      "titulo": "veterinario",
+      "inicio": "2006",
+      "fin": "incompleto",
+      "img": "assets/img/descarga.jpg"
+    }
+    
+],
+
+"habilidades": [
+  {
+    "id": 1,
+    "habilidad": "Html",
+    "progreso": "75",
+    "color": "",
+    "logo": "assets/img/logo html resized new.png"
+ },
+ 
+ {
+   "id": 2,
+   "habilidad": "Css",
+   "progreso": "70",
+   "color": "",
+   "logo": "assets/img/logo css resized new.png "
+},
+
+{
+  "id": 3,
+  "habilidad": "JavaScript",
+  "progreso": 50,
+  "color": "",
+  "logo": " assets/img/javascript logo resized new.png "
+}, 
+
+{
+"id": 4,
+"habilidad": "Bootstrap",
+"progreso": 65,
+"color": "",
+"logo": "assets/img/bootstrap-logo-shadow resized new.png"
+},
+
+{
+"id": 5,
+"habilidad": "Trabajo en equipo",
+"progreso": 80,
+"color": "",
+"logo":"assets/img/people-group-solid (1).svg"
+},
+
+{
+ "id": 6,
+"habilidad": "Comunicacion Asertiva",
+"progreso": 85,
+"color": "",
+"logo": "assets/img/comments-solid (1).svg"
+}
+],
+
+"experiencias": [
+  {
+    "id":1,
+    "empresa": "Laboratorio dental MG RayLab",
+    "puesto": "cadete administrativo",
+    "tareas":"cadete de tareas generales; envios y retiro de trabajos en diferentes consultorios odontológicos;compra y retiro de insumos.",
+    "inicio": "2015",
+    "fin":"actualidad",
+    "logo":""
+  },
+
+  {
+    "id":2,
+    "empresa": "Obra Social Unión Personal",
+    "puesto": "operador telefónico",
+    "tareas": "atención de afiliados vía telefónica. Manejo del conmutador del Sanatorio Anchorena. Recepción de llamadas en línea de urgencias médicas. Tareas de facturación. Asignación de turnos a través de página web.",
+    "inicio": "2008",
+    "fin":"2012",
+    "logo":""
+    
+  },
+
+  {
+    "id":3,
+    "empresa": "Tévere de Orfer srl.",
+    "puesto": "encargado",
+    "tareas": "encargado de atención al cliente en locales de Spinetto shopping, Del parque shopping, Showcenter(Haedo).",
+    "inicio": "2000",
+    "fin":"2007",
+    "logo":""
+    
+  },
+
+  {
+    "id":4,
+    "empresa": "Daminato Estudiantil",
+    "puesto": "promotor de ventas jr.",
+    "tareas": " ventas de viajes de egresados",
+    "inicio": "1999",
+    "fin":"2000",
+    "logo":""
+    
+  }
+  
+]
+
+
+  
+    
+}
+

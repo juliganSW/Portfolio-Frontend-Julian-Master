@@ -1,0 +1,28 @@
+
+    /* Redes Sociales*/
+
+i.fa-brands.fa-github.fa-2xl,
+i.fa-brands.fa-instagram.fa-2xl,
+i.fa-brands.fa-linkedin-in.fa-2xl,
+i.fa-solid.fa-user-astronaut.fa-2xl,
+i.fa-solid.fa-user-check.fa-2xl {
+    color: #fff;
+}
+i.fa-brands.fa-github.fa-2xl:hover {
+    color:#00c0a6;
+}
+i.fa-brands.fa-instagram.fa-2xl:hover {
+    color:   #e64077;
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover {
+    color: #00a2ff;
+}
+i.fa-solid.fa-user-astronaut.fa-2xl:hover {
+    color:#7fc1ff;
+}
+i.fa-solid.fa-user-check.fa-2xl:hover {
+color:#7fc1ff;
+}
+ul.list-group{
+    --bs-list-group-bg: transparent;
+} 
