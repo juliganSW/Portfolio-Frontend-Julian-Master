@@ -1,22 +1,25 @@
 <section id="proyectos" class="projects border border-dark">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-        <br>
+  <div class="container text-start">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <div class="col"></div>
+      <br>
+    </div>
+    <div class="row align-items-center mb-3">
+      <div class="col-2">
+        <img src=".\assets\img\proImg.svg" class="graphic">
       </div>
-      <div class="row align-items-center mb-3">
-        <div class="col-2">
-          <h2>Proyectos</h2>   
-        </div>
-        <div class="col-9">
-          <h5>{{detalle}}</h5>
-        </div>
-        <div class="col-1">
-        <img src={{imagen}} alt="logo argprog" width="" height="" class="project-img">
-            </div>
+      <div class="col-9">
+        <h1 class="proyectos mb-4">PROYECTOS</h1>
+        <div class="proyectos" *ngFor="let proyecto of proyectos">
+            <h4>&nbsp;{{proyecto.proyecto}} <img src={{proyecto.imagen}} class="rounded-circle" style="float:right;" alt="" width=""height=""></h4>
+            <h5>{{proyecto.descripcion}}</h5>
           </div>
         </div>
-      </section>
+      <div class="col-1">
+      </div>
+    </div>
+  </div>
+</section>

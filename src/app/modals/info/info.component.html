@@ -1,21 +1,111 @@
 <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg">
-          <h5 class="modal-title" id="exampleModalLabel">Acerca de mi</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <span class="input-group-text">Escribe un texto</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-          </div>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">GuardarCambios</button>
-        </div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg">
+        <h5 class="modal-title" id="exampleModalLabel">Acerca de mi</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form [formGroup]="form" name="personaForm">
+        <div class="modal-body">
+          <ul class="p-0">
+            <li  class="d-flex justify-content-between align-items-center m-1 ">
+              <span>{{persona.id}}. {{persona.nombre}} {{persona.apellido}}</span>
+              <span class="d-flex justify-content-between gap-2">
+                <!--lapiz de edicion-->
+                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
+                  (click)="cargarDetalle(persona.id)">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                </span>
+            </li>
+          </ul>
+          <!--validacion  renderizado condicional-->
+          <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+            <div class="input-group-prepend border-0">
+              <span class="input-group-text border-0" id="basic-addon1">Id:</span>
+            </div>
+            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Nombre</span>
+            <input type="text" id="nombre" class="form-control" aria-label="With textarea" placeholder="ingrese un nombre"
+            formControlName="nombre" [ngClass]="{'is-invalid':Nombre.errors && Nombre.touched,
+            'is-valid':!Nombre.errors && Nombre.touched}">
+            <div *ngIf="Nombre?.errors && Nombre?.touched">
+              <p *ngIf="Nombre?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Apellido</span>
+            <input type="text" id="apellido" class="form-control" aria-label="With textarea" placeholder="ingrese apellido"
+            formControlName="apellido"[ngClass]="{'is-invalid':Apellido.errors && Apellido.touched,
+            'is-valid':!Apellido.errors && Apellido.touched}">
+            <div *ngIf="Apellido?.errors && Apellido?.touched">
+              <p *ngIf="Apellido?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+            </div>
+            
+          <div class="mb-3">
+            <span class="input-group-text">Edad</span>
+            <input type="text" id="edad" class="form-control" aria-label="With textarea" placeholder="ingrese edad"
+            formControlName="edad">
+            </div>
+
+          <div class="mb-3">
+            <span class="input-group-text">Titulo</span>
+            <input type="text" id="titulo" class="form-control" aria-label="With textarea" placeholder="ingrese titulo"
+            formControlName="titulo">
+            </div>
+          <div class="mb-3">
+            <span class="input-group-text">Sobre mi</span>
+            <textarea type="text" id="acercademi" class="form-control" aria-label="With textarea" placeholder="escriba una descripcion"
+            formControlName="acercademi" [ngClass]="{'is-invalid':Acercademi.errors && Acercademi.touched,
+            'is-valid':!Acercademi.errors && Acercademi.touched}"></textarea>
+            <div *ngIf="Acercademi?.errors && Acercademi?.touched">
+              <p *ngIf="Acercademi?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+            </div>
+          <div class="mb-3">
+            <span class="input-group-text">Foto de perfil</span>
+            <input type="text" id="Imagen" class="form-control" aria-label="With textarea" placeholder="nueva imagen"
+            formControlName="imagen">
+            </div>
+          <div class="mb-3">
+            <span class="input-group-text">Email</span>
+            <input type="text" id="email" class="form-control" aria-label="With textarea" placeholder="ingrese email"
+            formControlName="email" [ngClass]="{'is-invalid':Email.errors && Email.touched,
+            'is-valid':!Email.errors && Email.touched}">
+            <div *ngIf="Email?.errors && Email?.touched">
+              <p *ngIf="Email?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+
+            </div>
+          <div class="mb-3">
+            <span class="input-group-text">Password</span>
+            <input type="text" id="password" class="form-control" aria-label="With textarea" placeholder="ingrese contraseña"
+            formControlName="password" [ngClass]="{'is-invalid':Password.errors && Password.touched,
+            'is-valid':!Password.errors && Password.touched}">
+            <div *ngIf="Password?.errors && Password?.touched">
+              <p *ngIf="Password?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+            </div>
+          </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
+          <button type="submit" class="btn btn-outline-success"(click)="onEdit()"
+          [disabled]="form.invalid">Guardar</button>
+        </div>
+      </form>
     </div>
   </div>
+</div>

@@ -1,90 +1,113 @@
+
 /*Fuente para toda la página*/
-*{
-    font-family: 'Rampart One', cursive;
-}
+* {
+  font-family: "Rampart One", cursive;
+  }
+
 /* Barra de Navegacion*/
 
-nav.navbar.navbar-expand-lg.bg-secondary.fixed-top{
-
-    background: #00d4ff;
-    background: linear-gradient(0deg, #00d4ff 0%, #2418d6 22%, #0a1077 81%, #00d4ff 100%);
-    height:15%;
+nav.navbar.navbar-expand-lg.bg-secondary.fixed-top {
+  background: #00d4ff;
+  background: linear-gradient(
+    0deg,
+    #00d4ff 0%,
+    #2418d6 22%,
+    #0a1077 81%,
+    #00d4ff 100%
+  );
+  height: 15%;
 }
-
 
 /* Banner*/
-section.banner{
-    background-image:  url(./assets/img/programador.jpg);
-    background-size: 100%;
-    height: 95vh;
-    background-repeat:no-repeat;
-    position:relative;
-    background-size: cover;
-    -webkit-background-size:cover ;
-    -moz-background-size:cover ;
-    -moz-background-size:cover ;
-    -ms-background-size:cover;
-    }
+section.banner {
+  background-image: url(.\assets\img\banner.jpg);
+  background-size: 100%;
+  height: 95vh;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  
+ 
+}
+
 h3.welcome {
-    padding-top: 8rem;
-    color: #ffffff;
-    font-size: 5rem;
-    text-shadow: #ffffff 0.1em 0.1em 0.1em;
+  padding-top: 8rem;
+  color: #ffffff;
+  font-size: 5rem;
+  text-shadow: #ffffff 0.1em 0.1em 0.1em;
 }
 h1.welcome {
-font-size: 3rem;
-text-shadow: #ffffff 0.1em 0.1em 0.1em;
+  font-size: 3rem;
+  text-shadow: #ffffff 0.1em 0.1em 0.1em;
 }
 h2.welcome {
-    font-size: 2rem;
-    text-shadow: #ffffff 0.1em 0.1em 0.1em;
+  font-size: 2rem;
+  text-shadow: #ffffff 0.1em 0.1em 0.1em;
 }
 
 /*Fondo de las secciones*/
 main {
-    background-image: url(./assets/img/fondo-gris-pintado_53876-94041.png);
+  background: linear-gradient(110.3deg, #495d6d 4.3%, #313752 96.7%);
 }
 
- 
- 
 /*ventanas Modales*/
 .modal-header.bg {
-    background-color: #0077c0
+  background-color: #0077c0;
+}
+.modal-body{
+    background: #43b6cdc6;
+}
+.modal-footer{
+    background: linear-gradient(110.3deg, #495d6d 4.3%, #313752 96.7%);
 }
 
 /* fondo de la página de administracion*/
- .panel {
-      background: linear-gradient(45deg,#ff0000,#0000ff,#00804f,#000000);
-	  background-size: 400% 400%;
-      position: relative;
-	  animation: cambiar 10s ease-in-out infinite;
-            
+.panel {
+  background: linear-gradient(45deg, #ff0000, #0000ff, #00804f, #000000);
+  background-size: 400% 400%;
+  position: relative;
+  animation: cambiar 10s ease-in-out infinite;
 }
-@keyframes cambiar{
-	  0%{background-position: 0 50%;}
-      50%{background-position: 100% 50%;}
-      100%{background-position: 0 50%;}
-}
- 
- .dashboard {
-    height: 90.3vh;
-}
- 
-ul.list-group{
-    --bs-list-group-bg: transparent;
-} 
-.vinculo{
-    text-decoration: none;
-    color:#ffffff;
+@keyframes cambiar {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
+.dashboard {
+  height: 100vh;
+}
 
+ul.list-group {
+  --bs-list-group-bg: transparent;
+}
+.vinculo {
+  text-decoration: none;
+  color: #ffffff;
+}
 
- /* Footer*/
+/* Footer*/
 footer {
-    background: #00d4ff;
-    background: linear-gradient(0deg, #00d4ff 0%, #2418d6 22%, #0a1077 81%, #00d4ff 100%);
-    height:3rem;
-    margin-top:0.8rem; 
-    color: #ffffff;
-}
+  background: #00d4ff;
+  background: linear-gradient(
+    0deg,
+    #00d4ff 0%,
+    #2418d6 22%,
+    #0a1077 81%,
+    #00d4ff 100%
+    );
+ /*height: 3rem;*/
+  margin-top: 0.8rem;
+  color: #ffffff;
+  
+ }

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,19 +17,22 @@ import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { FooterComponent } from './footer/footer.component';
 import { AdminComponent } from './admin/admin.component';
-import { ErrorComponent } from './error/error.component';
+
 import { InicioComponent } from './inicio/inicio.component';
 import { NavegacionComponent } from './navadmin/navegacion.component';
 import { LogoutComponent } from './modals/logout/logout.component';
 import { BotonadminComponent } from './botonadmin/botonadmin.component';
 import { ListgroupComponent } from './listgroup/listgroup.component';
 import { SocialesComponent } from './modals/sociales/sociales.component';
-import { BackgroundComponent } from './modals/background/background.component';
+
 import { InfoComponent } from './modals/info/info.component';
 import { ExperienceComponent } from './modals/experience/experience.component';
 import { EducationComponent } from './modals/education/education.component';
 import { SkillsComponent } from './modals/skills/skills.component';
 import { ProjectsComponent } from './modals/projects/projects.component';
+import { InterceptorService } from './servicios/interceptor.service';
+
+
 
 
 @NgModule({
@@ -46,28 +49,31 @@ import { ProjectsComponent } from './modals/projects/projects.component';
     ProyectosComponent,
     FooterComponent,
     AdminComponent,
-    ErrorComponent,
     InicioComponent,
     NavegacionComponent,
     LogoutComponent,
     BotonadminComponent,
     ListgroupComponent,
     SocialesComponent,
-    BackgroundComponent,
     InfoComponent,
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
+    
+    
+
 
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+     FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:InterceptorService,multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

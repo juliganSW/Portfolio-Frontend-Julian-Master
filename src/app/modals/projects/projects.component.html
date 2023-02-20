@@ -1,21 +1,72 @@
 <div class="modal fade" id="proyectosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg">
-          <h5 class="modal-title" id="exampleModalLabel">Proyectos</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg">
+        <h5 class="modal-title" id="exampleModalLabel">Proyectos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form [formGroup]="form" name="proyectosForm">
         <div class="modal-body">
-          <div class="mb-3">
-            <span class="input-group-text">Escribe un texto</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+          <ul class="p-0">
+            <li *ngFor="let proyecto of proyectos" class="d-flex justify-content-between align-items-center m-1 ">
+              <span>{{proyecto.id}}. {{proyecto.proyecto}}</span>
+              <span class="d-flex justify-content-between gap-2">
+                <!--lapiz de edicion-->
+                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
+                  (click)="cargarDetalle(proyecto.id)">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <!--boton eliminar-->
+                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(proyecto.id)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </span>
+            </li>
+          </ul>
+
+          <!--validacion  renderizado condicional-->
+          <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+            <div class="input-group-prepend border-0">
+              <span class="input-group-text border-0" id="basic-addon1">id:</span>
+            </div>
+            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
 
-        </div>
+          <div class="mb-3">
+            <span class="input-group-text">Proyecto</span>
+            <input class="form-control" type="text" id="proyecto" aria-label="With textarea"
+              placeholder="ingrese proyecto" formControlName="proyecto" [ngClass]="{'is-invalid':Proyecto.errors && Proyecto.touched,
+            'is-valid':!Proyecto.errors && Proyecto.touched}">
+            <div *ngIf="Proyecto?.errors && Proyecto?.touched">
+              <p *ngIf="Proyecto?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+           </div>
+          <div class="mb-3">
+            <span class="input-group-text">Descripcion</span>
+            <textarea class="form-control" type="text" id="descripcion" aria-label="With textarea"
+              placeholder="escriba una descripcion" formControlName="descripcion" [ngClass]="{'is-invalid':Descripcion.errors && Descripcion.touched,
+             'is-valid':!Descripcion.errors && Descripcion.touched}"></textarea>
+            <div *ngIf="Descripcion?.errors && Proyecto?.touched">
+              <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+           </div>
+          <div class="mb-3">
+            <span class="input-group-text">Imagen</span>
+            <input class="form-control" type="text" id="proyectoImagen" aria-label="With textarea"
+              placeholder="nueva imagen" formControlName="imagen">
+          </div>
+          </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">GuardarCambios</button>
+        <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
+          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+            [disabled]="form.invalid">Guardar</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
+</div>

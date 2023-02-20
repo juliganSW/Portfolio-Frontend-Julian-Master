@@ -7,13 +7,22 @@
     margin:0.8rem; 
    }
 .projects.border.border-dark:hover {
-    box-shadow: 0.625rem 0.313rem 0.313rem #0044ff;   
+    box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
 }
-.project-img {
+
+.rounded-circle {
     box-shadow: 0.325rem 0.313rem 0.313rem #ffffff;
-    width:9rem;
-    
+    width: 16%;
 }
-h2 {
-    color: #ffffff;
+
+h1 {
+    color:#000000;
+    text-shadow: #ffffff 0.1em 0.1em 0.1em;
+}
+h4{
+    color: #000000;
+}
+.graphic{
+    margin-left:-5rem;
+    width: 10rem;
 }

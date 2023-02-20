@@ -1,25 +1,28 @@
 <section id="educacion" class="education border border-dark">
-    <div class="container text-center" >
-      <div class="row">
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <div class="col-3"></div>
-        <br>
-      </div>
-     <div class="row align-items-center">
-      <div class="col-2 mt-3">
-        <h2>Educacion</h2>
-      </div>
-      <div class="col-9 mt-2">
-        <div class="educacion" *ngFor="let education of educacion">
-        <h4><img src={{education.img}} style="float:left;" alt="logo colegio" width="8%">&nbsp;{{education.institucion}}</h4>
-        <h5>{{education.titulo}}</h5>
-        <h6>{{education.inicio}} - {{education.fin}}</h6>
-      </div>
+  <div class="container text-start">
+    <div class="row">
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <br>
     </div>
-      <div class="col-1">
-          </div>
+    <div class="row align-items-center">
+      <div class="col-2 mt-4">
+        <img src=".\assets\img\eduImg.svg" class="graphic">
+    </div>
+      <div class="col-9">
+        <h1 class="edu mb-4">EDUCACION</h1>
+        <div class="educacion" *ngFor="let education of educacion">
+          <h4><span class="text">Institucion:&nbsp;</span><img src={{education.imagen}} class="rounded-circle" style="float:right;" alt=""
+              width="10%">&nbsp;{{education.institucion}}</h4>
+          <h4><span class="text">Titulo:&nbsp;</span>{{education.titulo}}</h4>
+          <p><span class="text">Inicio:&nbsp;</span>{{education.inicio}}</p> 
+          <p><span class="text">Fin:&nbsp;</span>{{education.fin}}</p>
         </div>
       </div>
-     </section>
+      <div class="col-1">
+      </div>
+    </div>
+  </div>
+</section>

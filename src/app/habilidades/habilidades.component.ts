@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from '../servicios/portfolio.service';
+import { Habilidad } from '../model/habilidad';
+import { HabilidadService } from '../services/habilidad.service';
 
 @Component({
   selector: 'app-habilidades',
   templateUrl: './habilidades.component.html',
-  styleUrls: ['./habilidades.component.css']
+  styleUrls: ['./habilidades.component.css'],
 })
 export class HabilidadesComponent implements OnInit {
-  //Inicializar variables de instancia para almacenar los datos con los que trata el servicio
-
-  constructor(private portfolioService: PortfolioService) { }
-  habilidades:any=[];
-
+  habilidades: Habilidad[] = [];
+  constructor(private habilidadService: HabilidadService) {}
 
   ngOnInit(): void {
-    this.portfolioService.getDatos().subscribe(portfolio => {
-      console.log(portfolio);
-      //definir informacion para mostrar
-      this.habilidades= portfolio.habilidades;
-      
-    });
+    this.cargarHabilidad();
   }
 
+  cargarHabilidad(): void {
+    this.habilidadService.List().subscribe((data) => {
+      this.habilidades = data;
+    });
+  }
 }

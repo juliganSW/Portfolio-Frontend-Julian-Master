@@ -1,21 +1,72 @@
 <div class="modal fade" id="habilidadesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg">
-          <h5 class="modal-title" id="exampleModalLabel">Habilidades</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg">
+        <h5 class="modal-title" id="exampleModalLabel">Habilidad</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form [formGroup]="form" name="habilidadesForm">
+
         <div class="modal-body">
-          <div class="mb-3">
-            <span class="input-group-text">Escribe un texto</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+          <ul class="p-0">
+            <li *ngFor="let habilidad of habilidades" class="d-flex justify-content-between align-items-center m-1 ">
+              <span>{{habilidad.id}}. {{habilidad.habilidad}}</span>
+              <span class="d-flex justify-content-between gap-2">
+                <!--lapiz de edicion-->
+                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
+                  (click)="cargarDetalle(habilidad.id)">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <!--boton eliminar-->
+                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
+                  (click)="borrar(habilidad.id)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </span>
+            </li>
+          </ul>
+          <!--validacion  renderizado condicional-->
+          <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+            <div class="input-group-prepend border-0">
+              <span class="input-group-text border-0" id="basic-addon1">Id:</span>
+            </div>
+            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
 
+          <div class="mb-3">
+            <span class="input-group-text">habilidad</span>
+            <input class="form-control" type="text" aria-label="With textarea" id="habilidadNombre" name="habilidad"
+              placeholder="ingrese habilidad" formControlName="habilidad" [ngClass]="{'is-invalid':Habilidad.errors && Habilidad.touched,
+          'is-valid':!Habilidad.errors && Habilidad.touched}">
+            <div *ngIf="Habilidad?.errors && Habilidad?.touched">
+              <p *ngIf="Habilidad?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Progreso</span>
+            <input class="form-control" type="number" min="0" max="100" id="habilidadProgreso" name="progreso"
+              aria-label="With textarea" placeholder="ingrese progreso" formControlName="progreso" [ngClass]="{'is-invalid':Progreso.errors && Progreso.touched,
+          'is-valid':!Progreso.errors && Progreso.touched}">
+            <div *ngIf="Progreso?.errors && Progreso?.touched">
+              <p *ngIf="Progreso?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Logo</span>
+            <input class="form-control" type="text" id="logo" name="logo" aria-label="With textarea"
+              placeholder="nuevo logo" formControlName="logo">
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">GuardarCambios</button>
+          <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
+          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+            [disabled]="form.invalid">Guardar</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
+</div>

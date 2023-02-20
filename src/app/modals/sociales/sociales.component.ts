@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-sociales',
   templateUrl: './sociales.component.html',
-  styleUrls: ['./sociales.component.css']
+  styleUrls: ['./sociales.component.css'],
 })
 export class SocialesComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -7,11 +7,19 @@
     margin:0.8rem;
 } 
 .experience.border.border-dark:hover{
-    box-shadow: 0.625rem 0.313rem 0.313rem #0044ff;   
+    box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
 }
-h2 {
+h1 {
  color: #000000;
+ text-shadow: #ffffff 0.1em 0.1em 0.1em;
 }
+
 .text {
     color: #000000;
+    text-decoration-line: underline;
+}
+.graphic {
+    margin-left:-6rem;
+    width:16rem;
+   
 }

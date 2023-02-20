@@ -1,32 +1,50 @@
-<!-- Modal de Login--> 
+<!-- Modal de Login-->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header bg">
-          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form [formGroup]="loginform" (ngSubmit)="onEnviar($event)">
         <div class="modal-body">
           <div class="mb-3 row">
-            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <label for="user">Email</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control-plaintext" id="staticEmail" value="email@ejemplo.com">
+              <input class="form-control" type="email" placeholder="ingrese email" id="inputEmail"
+                formControlName="email" [(ngModel)]="persona.email"
+                [ngClass]="{'is-invalid':Email?.errors && Email?.touched,'is-valid':!Email?.errors && Email?.touched}">
+              <div *ngIf="Email?.errors && Email?.touched">
+                <p *ngIf="Email?.hasError('required')" class="text-danger">
+                  El email es requerido
+                </p>
+                <p *ngIf="Email?.hasError('email')" class="text-danger">
+                  Ingrese email valido.
+              </div>
             </div>
           </div>
           <div class="mb-3 row">
-            <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+            <label for="password" class="col-sm-3 col-form-label">Contraseña</label>
             <div class="col-sm-10">
-              <input type="password" class="form-control" id="inputPassword">
+              <input class="form-control" type="password" id="inputPassword" placeholder="ingrese contraseña"
+                formControlName="password" [(ngModel)]="persona.password" [ngClass]="{'is-invalid':Password?.errors && Password?.touched,
+              'is-valid':!Password?.errors && Password?.touched}">
+              <div *ngIf="Password?.errors && Password?.touched">
+                <p *ngIf="Password?.hasError('required')" class="text-danger">
+                  La contraseña es requerida
+                </p>
+                <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+                  La contraseña debe tener 8 o más caracteres
+              </div>
             </div>
           </div>
-
         </div>
+
         <div class="modal-footer">
-
-          <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+          <button type="submit" class="btn btn-primary" (click)="onEnviar($event)">Iniciar Sesion</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
-
-
+</div>

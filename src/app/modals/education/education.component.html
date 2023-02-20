@@ -1,21 +1,82 @@
 <div class="modal fade" id="estudiosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header bg">
-          <h5 class="modal-title" id="exampleModalLabel">Estudios</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header bg">
+        <h5 class="modal-title" id="exampleModalLabel">Educacion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form [formGroup]="form" name="educacionForm">
         <div class="modal-body">
-          <div class="mb-3">
-            <span class="input-group-text">Escribe un texto</span>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+          <ul class="p-0">
+            <li *ngFor="let education of educacion" class="d-flex justify-content-between align-items-center m-1 ">
+              <span>{{education.id}}. {{education.institucion}}</span>
+              <span class="d-flex justify-content-between gap-2">
+                <!--lapiz de edicion-->
+                <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
+                  (click)="cargarDetalle(education.id)">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+                <!--boton eliminar-->
+                <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
+                  (click)="borrar(education.id)">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </span>
+            </li>
+          </ul>
+          <!--validacion  renderizado condicional-->
+          <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
+            <div class="input-group-prepend border-0">
+              <span class="input-group-text border-0" id="basic-addon1">Id:</span>
+            </div>
+            <input class="form-control outline-none border-0 bg-transparent" type="text" readonly formControlName="id">
           </div>
 
+          <div class="mb-3">
+            <span class="input-group-text">Institucion</span>
+            <input class="form-control" type="text" id="institucion" name="institucion" aria-label="With textarea"
+              placeholder="ingrese institucion" formControlName="institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors &&
+                    Institucion?.touched}">
+            <div *ngIf="Institucion?.errors && Institucion?.touched">
+              <p *ngIf="Institucion?.hasError('required')" class="text-danger">
+               Campo obligatorio
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Titulo</span>
+            <input class="form-control" type="text" id="titulo" name="titulo" aria-label="With textarea"
+              placeholder="ingrese titulo" formControlName="titulo" [ngClass]="{'is-invalid':Titulo?.errors && Titulo?.touched, 'is-valid':!Titulo?.errors &&
+                    Titulo?.touched}">
+            <div *ngIf="Titulo?.errors && Titulo?.touched">
+              <p *ngIf="Titulo?.hasError('required')" class="text-danger">
+                Campo obligatorio
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Imagen</span>
+            <input class="form-control" type="text" id="imagen" name="imagen" aria-label="With textarea"
+              placeholder="nueva imagen" formControlName="imagen">
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Inicio</span>
+            <input class="form-control" type="date" id="inicio" aria-label="With textarea"
+              formControlName="inicio">
+          </div>
+          <div class="mb-3">
+            <span class="input-group-text">Fin</span>
+            <input class="form-control" type="date" id="fin" aria-label="With textarea"
+              formControlName="fin">
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-primary">GuardarCambios</button>
+         <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
+          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+            [disabled]="form.invalid">Guardar</button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
+</div>
