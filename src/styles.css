@@ -1,12 +1,26 @@
 
-/*Fuente para toda la página*/
+
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Rampart One", cursive;
+  scroll-behavior: smooth;
   }
 
-/* Barra de Navegacion*/
+   html{
+    height: 100%;
+    
+  }
 
-nav.navbar.navbar-expand-lg.bg-secondary.fixed-top {
+  body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  } 
+
+/* Barra de Navegacion*/
+nav.navbar.navbar-expand-lg.bg-secondary {
   background: #00d4ff;
   background: linear-gradient(
     0deg,
@@ -14,55 +28,30 @@ nav.navbar.navbar-expand-lg.bg-secondary.fixed-top {
     #2418d6 22%,
     #0a1077 81%,
     #00d4ff 100%
-  );
-  height: 15%;
-}
-
-/* Banner*/
-section.banner {
-  background-image: url(.\assets\img\banner.jpg);
-  background-size: 100%;
-  height: 95vh;
-  background-repeat: no-repeat;
-  position: relative;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -moz-background-size: cover;
-  -ms-background-size: cover;
-  
+    );
+    
+   }
  
-}
-
-h3.welcome {
-  padding-top: 8rem;
-  color: #ffffff;
-  font-size: 5rem;
-  text-shadow: #ffffff 0.1em 0.1em 0.1em;
-}
-h1.welcome {
-  font-size: 3rem;
-  text-shadow: #ffffff 0.1em 0.1em 0.1em;
-}
-h2.welcome {
-  font-size: 2rem;
-  text-shadow: #ffffff 0.1em 0.1em 0.1em;
-}
-
 /*Fondo de las secciones*/
 main {
   background: linear-gradient(110.3deg, #495d6d 4.3%, #313752 96.7%);
+  background-size: 100%;
 }
 
 /*ventanas Modales*/
 .modal-header.bg {
   background-color: #0077c0;
-}
+  color:#000000;
+ }
 .modal-body{
-    background: #43b6cdc6;
+  background-image: linear-gradient( 132.6deg,  rgba(71,139,214,1) 23.3%, rgba(37,216,211,1) 84.7% );
 }
 .modal-footer{
     background: linear-gradient(110.3deg, #495d6d 4.3%, #313752 96.7%);
+}
+.input-group-text{
+  background-color: #0077c0;
+  color: #ffffff;
 }
 
 /* fondo de la página de administracion*/
@@ -84,16 +73,28 @@ main {
   }
 }
 
-.dashboard {
-  height: 100vh;
-}
 
+/*estilos de la lista del dashboard*/
 ul.list-group {
   --bs-list-group-bg: transparent;
+ 
 }
 .vinculo {
   text-decoration: none;
   color: #ffffff;
+}
+.list-group{
+  margin-bottom:3rem;
+}
+.list-group-item {
+  background-image: radial-gradient( circle farthest-corner at 50.3% 44.5%, 
+   rgba(116,147,179,1) 0%, rgba(62,83,104,1) 100.2% );
+  
+  
+}
+.panel{
+  min-height: 100vh;
+  min-width: 100%
 }
 
 /* Footer*/
@@ -106,8 +107,9 @@ footer {
     #0a1077 81%,
     #00d4ff 100%
     );
- /*height: 3rem;*/
-  margin-top: 0.8rem;
-  color: #ffffff;
   
- }
+  margin-top: auto;
+  color: #ffffff;
+  }
+ 
+ 

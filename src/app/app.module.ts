@@ -31,6 +31,7 @@ import { EducationComponent } from './modals/education/education.component';
 import { SkillsComponent } from './modals/skills/skills.component';
 import { ProjectsComponent } from './modals/projects/projects.component';
 import { InterceptorService } from './servicios/interceptor.service';
+import { FooteradminComponent } from './footeradmin/footeradmin.component';
 
 
 
@@ -60,6 +61,8 @@ import { InterceptorService } from './servicios/interceptor.service';
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
+    FooteradminComponent,
+    
     
     
 

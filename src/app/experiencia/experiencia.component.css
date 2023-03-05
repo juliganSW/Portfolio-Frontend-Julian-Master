@@ -1,12 +1,12 @@
 /* Seccion experiencia*/
-.experience.border.border-dark {
+.experience {
     color:#ffffffb9;
     background-color: #0077c0;
-    border-radius:3rem;
+   /* border-radius:3rem;*/
     box-shadow: 0.625rem 0.313rem 0.313rem #000000;
-    margin:0.8rem;
+    margin-bottom:1rem;
 } 
-.experience.border.border-dark:hover{
+.border.border-dark:hover{
     box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
 }
 h1 {
@@ -18,8 +18,26 @@ h1 {
     color: #000000;
     text-decoration-line: underline;
 }
-.graphic {
-    margin-left:-6rem;
-    width:16rem;
+ .img-fluid {
+  margin-left:-1rem;
+  box-shadow: 0.625rem 0.313rem 0.313rem #260f70;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition:1s;
+  } 
+
+  .img-fluid:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
    
-}
+.line {
+    border-top: 0.063rem solid black;
+    height: 0.125rem;
+    padding: 0;
+    margin: 0.125rem auto 0 auto;
+    }
+
+    
+  

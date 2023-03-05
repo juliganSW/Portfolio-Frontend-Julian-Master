@@ -1,26 +1,45 @@
 /*Seccion habilidades*/
-.skills.border.border-dark {
+.skills {
     color:#000000;
      background-color: #0077c0;
-    border-radius:3rem;
+   /* border-radius:3rem;*/
     box-shadow: 0.625rem 0.313rem 0.313rem #000000;
-    margin:0.8rem; 
+    margin-bottom:1rem; 
     }
-    .skills.border.border-dark:hover{
-        box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
+.skills.border.border-dark:hover{
+    box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
     }
 
 .progress-bar.progress-bar-striped.progress-bar-animated {
     background: #00d4ff;
     background: linear-gradient(0deg, #00d4ff 0%, #2418d6 22%, #0a1077 81%, #00d4ff 100%);
-color:#ffffff;
-font-size:large;
+    color:#ffffff;
+    font-size:large;
 }
 h1{
     color:#000000;
     text-shadow: #ffffff 0.1em 0.1em 0.1em;
 }
-.graphic {
-    margin-left:-6rem;
-    width: 14rem;
+.img-fluid {
+    margin-left:-1rem;
+    box-shadow: 0.625rem 0.313rem 0.313rem #260f70 ;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition:1s;
+}
+
+.img-fluid:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+
+.img-thumbnail{
+    cursor: pointer;
+    transition:1s;
+}
+
+.img-thumbnail:hover{
+    transform: scale(1.1);
+    transition: 1s;
+
 }

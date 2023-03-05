@@ -15,7 +15,7 @@
                 <!--lapiz de edicion-->
                 <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
                   (click)="cargarDetalle(education.id)">
-                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-pencil"></i>
                 </button>
                 <!--boton eliminar-->
                 <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
@@ -36,7 +36,7 @@
           <div class="mb-3">
             <span class="input-group-text">Institucion</span>
             <input class="form-control" type="text" id="institucion" name="institucion" aria-label="With textarea"
-              placeholder="ingrese institucion" formControlName="institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors &&
+              placeholder="Ingrese institucion" formControlName="institucion" [ngClass]="{'is-invalid': Institucion?.errors && Institucion?.touched, 'is-valid': !Institucion?.errors &&
                     Institucion?.touched}">
             <div *ngIf="Institucion?.errors && Institucion?.touched">
               <p *ngIf="Institucion?.hasError('required')" class="text-danger">
@@ -47,7 +47,7 @@
           <div class="mb-3">
             <span class="input-group-text">Titulo</span>
             <input class="form-control" type="text" id="titulo" name="titulo" aria-label="With textarea"
-              placeholder="ingrese titulo" formControlName="titulo" [ngClass]="{'is-invalid':Titulo?.errors && Titulo?.touched, 'is-valid':!Titulo?.errors &&
+              placeholder="Ingrese titulo" formControlName="titulo" [ngClass]="{'is-invalid':Titulo?.errors && Titulo?.touched, 'is-valid':!Titulo?.errors &&
                     Titulo?.touched}">
             <div *ngIf="Titulo?.errors && Titulo?.touched">
               <p *ngIf="Titulo?.hasError('required')" class="text-danger">
@@ -58,7 +58,7 @@
           <div class="mb-3">
             <span class="input-group-text">Imagen</span>
             <input class="form-control" type="text" id="imagen" name="imagen" aria-label="With textarea"
-              placeholder="nueva imagen" formControlName="imagen">
+              placeholder="Nueva imagen" formControlName="imagen">
           </div>
           <div class="mb-3">
             <span class="input-group-text">Inicio</span>
@@ -70,10 +70,11 @@
             <input class="form-control" type="date" id="fin" aria-label="With textarea"
               formControlName="fin">
           </div>
-        </div>
+         </div>
         <div class="modal-footer">
-         <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
-          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+         <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+         <button class="btn btn-outline-warning" (click)="form.reset()">Reset</button>
+          <button type="button" class="btn btn-outline-info" (click)="onCreate()"
             [disabled]="form.invalid">Guardar</button>
         </div>
       </form>

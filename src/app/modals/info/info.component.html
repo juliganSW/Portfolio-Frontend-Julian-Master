@@ -14,7 +14,7 @@
                 <!--lapiz de edicion-->
                 <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
                   (click)="cargarDetalle(persona.id)">
-                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-pencil"></i>
                 </button>
                 </span>
             </li>
@@ -28,7 +28,7 @@
           </div>
           <div class="mb-3">
             <span class="input-group-text">Nombre</span>
-            <input type="text" id="nombre" class="form-control" aria-label="With textarea" placeholder="ingrese un nombre"
+            <input type="text" id="nombre" class="form-control" aria-label="With textarea" placeholder="Ingrese un nombre"
             formControlName="nombre" [ngClass]="{'is-invalid':Nombre.errors && Nombre.touched,
             'is-valid':!Nombre.errors && Nombre.touched}">
             <div *ngIf="Nombre?.errors && Nombre?.touched">
@@ -39,7 +39,7 @@
           </div>
           <div class="mb-3">
             <span class="input-group-text">Apellido</span>
-            <input type="text" id="apellido" class="form-control" aria-label="With textarea" placeholder="ingrese apellido"
+            <input type="text" id="apellido" class="form-control" aria-label="With textarea" placeholder="Ingrese apellido"
             formControlName="apellido"[ngClass]="{'is-invalid':Apellido.errors && Apellido.touched,
             'is-valid':!Apellido.errors && Apellido.touched}">
             <div *ngIf="Apellido?.errors && Apellido?.touched">
@@ -51,18 +51,18 @@
             
           <div class="mb-3">
             <span class="input-group-text">Edad</span>
-            <input type="text" id="edad" class="form-control" aria-label="With textarea" placeholder="ingrese edad"
+            <input type="text" id="edad" class="form-control" aria-label="With textarea" placeholder="Ingrese edad"
             formControlName="edad">
             </div>
 
           <div class="mb-3">
             <span class="input-group-text">Titulo</span>
-            <input type="text" id="titulo" class="form-control" aria-label="With textarea" placeholder="ingrese titulo"
+            <input type="text" id="titulo" class="form-control" aria-label="With textarea" placeholder="Ingrese titulo"
             formControlName="titulo">
             </div>
           <div class="mb-3">
             <span class="input-group-text">Sobre mi</span>
-            <textarea type="text" id="acercademi" class="form-control" aria-label="With textarea" placeholder="escriba una descripcion"
+            <textarea type="text" id="acercademi" class="form-control" aria-label="With textarea" placeholder="Escriba una descripcion"
             formControlName="acercademi" [ngClass]="{'is-invalid':Acercademi.errors && Acercademi.touched,
             'is-valid':!Acercademi.errors && Acercademi.touched}"></textarea>
             <div *ngIf="Acercademi?.errors && Acercademi?.touched">
@@ -73,12 +73,12 @@
             </div>
           <div class="mb-3">
             <span class="input-group-text">Foto de perfil</span>
-            <input type="text" id="Imagen" class="form-control" aria-label="With textarea" placeholder="nueva imagen"
+            <input type="text" id="Imagen" class="form-control" aria-label="With textarea" placeholder="Nueva imagen"
             formControlName="imagen">
             </div>
           <div class="mb-3">
             <span class="input-group-text">Email</span>
-            <input type="text" id="email" class="form-control" aria-label="With textarea" placeholder="ingrese email"
+            <input type="text" id="email" class="form-control" aria-label="With textarea" placeholder="Ingrese email"
             formControlName="email" [ngClass]="{'is-invalid':Email.errors && Email.touched,
             'is-valid':!Email.errors && Email.touched}">
             <div *ngIf="Email?.errors && Email?.touched">
@@ -90,7 +90,7 @@
             </div>
           <div class="mb-3">
             <span class="input-group-text">Password</span>
-            <input type="text" id="password" class="form-control" aria-label="With textarea" placeholder="ingrese contraseña"
+            <input type="text" id="password" class="form-control" aria-label="With textarea" placeholder="Ingrese contraseña"
             formControlName="password" [ngClass]="{'is-invalid':Password.errors && Password.touched,
             'is-valid':!Password.errors && Password.touched}">
             <div *ngIf="Password?.errors && Password?.touched">
@@ -101,8 +101,9 @@
             </div>
           </div>
         <div class="modal-footer">
-          <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
-          <button type="submit" class="btn btn-outline-success"(click)="onEdit()"
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-outline-warning" (click)="form.reset()">Reset</button>
+          <button type="submit" class="btn btn-outline-info"(click)="onEdit()"
           [disabled]="form.invalid">Guardar</button>
         </div>
       </form>

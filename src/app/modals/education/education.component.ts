@@ -19,6 +19,7 @@ export class EducationComponent implements OnInit {
   fin: any;
   titulo: string;
   imagen = '';
+  
 
   constructor(
     private formBuilder: FormBuilder, private educacionService: EducacionService, private router: Router) {

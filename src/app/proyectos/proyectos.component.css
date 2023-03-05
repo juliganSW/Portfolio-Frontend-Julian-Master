@@ -1,17 +1,17 @@
 /*Seccion Proyectos*/
-.projects.border.border-dark{
+.projects {
     color:#ffffffb9;
     background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
-    border-radius:3rem;
+    /*border-radius:3rem;*/
     box-shadow: 0.625rem 0.313rem 0.313rem #000000;
-    margin:0.8rem; 
+    margin-bottom:1rem; 
    }
 .projects.border.border-dark:hover {
     box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
 }
 
 .rounded-circle {
-    box-shadow: 0.325rem 0.313rem 0.313rem #ffffff;
+    box-shadow: 0.315rem 0.310rem 0.310rem #ffffff;
     width: 16%;
 }
 
@@ -22,7 +22,14 @@ h1 {
 h4{
     color: #000000;
 }
-.graphic{
-    margin-left:-5rem;
-    width: 10rem;
+.img-fluid {
+    margin-left:-1rem;
+    box-shadow: 0.625rem 0.313rem 0.313rem #260f70 ;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition:1s;
 }
+.img-fluid:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }

@@ -5,24 +5,23 @@
       <div class="col-3"></div>
       <div class="col-3"></div>
       <div class="col-3"></div>
-      <br>
+      </div>
+    <div class="row d-flex align-items-center">
+      <div class="col-3 mt-4">
+        <img class="img-fluid float-start" src="./assets/img/educacion.jpg">
     </div>
-    <div class="row align-items-center">
-      <div class="col-2 mt-4">
-        <img src=".\assets\img\eduImg.svg" class="graphic">
-    </div>
-      <div class="col-9">
+      <div class="col-9 mt-3">
         <h1 class="edu mb-4">EDUCACION</h1>
-        <div class="educacion" *ngFor="let education of educacion">
-          <h4><span class="text">Institucion:&nbsp;</span><img src={{education.imagen}} class="rounded-circle" style="float:right;" alt=""
+        <div class="educacion mb-3" *ngFor="let education of educacion">
+          <h4><span class="text">Institucion:&nbsp;</span><img src={{education.imagen}} class="rounded-circle float-end" alt=""
               width="10%">&nbsp;{{education.institucion}}</h4>
           <h4><span class="text">Titulo:&nbsp;</span>{{education.titulo}}</h4>
-          <p><span class="text">Inicio:&nbsp;</span>{{education.inicio}}</p> 
-          <p><span class="text">Fin:&nbsp;</span>{{education.fin}}</p>
+          <p><span class="text">Inicio:&nbsp;</span>{{education.inicio | date:"dd-MM-yyyy"}}</p> 
+          <p><span class="text">Fin:&nbsp;</span>{{education.fin | date:"dd-MM-yyyy"}}</p>
+          <div class="line"></div>
         </div>
       </div>
-      <div class="col-1">
-      </div>
+      
     </div>
   </div>
 </section>

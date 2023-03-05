@@ -10,7 +10,7 @@ export class EducacionService {
   // editEducacion() {
   //   throw new Error('Method not implemented.');
   // }
-  url = 'http://localhost:8080/educacion';
+  url = 'https://portfolio-backend-xube.onrender.com/educacion'
   updateEducacion:any;
 
   constructor(private http: HttpClient) {}

@@ -15,7 +15,7 @@
                 <!--lapiz de edicion-->
                 <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
                   (click)="cargarDetalle(habilidad.id)">
-                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-pencil"></i>
                 </button>
                 <!--boton eliminar-->
                 <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
@@ -34,9 +34,9 @@
           </div>
 
           <div class="mb-3">
-            <span class="input-group-text">habilidad</span>
+            <span class="input-group-text">Habilidad</span>
             <input class="form-control" type="text" aria-label="With textarea" id="habilidadNombre" name="habilidad"
-              placeholder="ingrese habilidad" formControlName="habilidad" [ngClass]="{'is-invalid':Habilidad.errors && Habilidad.touched,
+              placeholder="Ingrese habilidad" formControlName="habilidad" [ngClass]="{'is-invalid':Habilidad.errors && Habilidad.touched,
           'is-valid':!Habilidad.errors && Habilidad.touched}">
             <div *ngIf="Habilidad?.errors && Habilidad?.touched">
               <p *ngIf="Habilidad?.hasError('required')" class="text-danger">
@@ -47,7 +47,7 @@
           <div class="mb-3">
             <span class="input-group-text">Progreso</span>
             <input class="form-control" type="number" min="0" max="100" id="habilidadProgreso" name="progreso"
-              aria-label="With textarea" placeholder="ingrese progreso" formControlName="progreso" [ngClass]="{'is-invalid':Progreso.errors && Progreso.touched,
+              aria-label="With textarea" placeholder="Ingrese progreso" formControlName="progreso" [ngClass]="{'is-invalid':Progreso.errors && Progreso.touched,
           'is-valid':!Progreso.errors && Progreso.touched}">
             <div *ngIf="Progreso?.errors && Progreso?.touched">
               <p *ngIf="Progreso?.hasError('required')" class="text-danger">
@@ -58,12 +58,13 @@
           <div class="mb-3">
             <span class="input-group-text">Logo</span>
             <input class="form-control" type="text" id="logo" name="logo" aria-label="With textarea"
-              placeholder="nuevo logo" formControlName="logo">
+              placeholder="Nuevo logo" formControlName="logo">
           </div>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
-          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-outline-warning" (click)="form.reset()">Reset</button>
+          <button type="button" class="btn btn-outline-info" (click)="onCreate()"
             [disabled]="form.invalid">Guardar</button>
         </div>
       </form>

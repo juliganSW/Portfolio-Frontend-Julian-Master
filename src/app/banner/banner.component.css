@@ -1,0 +1,74 @@
+/* Banner*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+  .wrap {
+   min-width: 100vw;
+   min-height:85vh ;
+    display: flex;
+    justify-content: center;
+    background: url(../../assets/img/banner.jpg);
+    background-size:cover;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+}
+   
+  h3.greeting {
+    margin-top:5rem;
+    color: #ffffff;
+    font-size: 5rem;
+    text-shadow: #ffffff 0.1em 0.1em 0.1em;
+  }
+
+  h1.greeting {
+    color: #ffffff;
+    font-size: 3rem;
+    text-shadow: #ffffff 0.1em 0.1em 0.1em;
+  }
+
+  h2.greeting {
+    color: #ffffff;
+    font-size: 2rem;
+    text-shadow: #ffffff 0.1em 0.1em 0.1em;
+  }
+
+  .fade-in-text  {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

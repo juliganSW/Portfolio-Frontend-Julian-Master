@@ -26,10 +26,8 @@ export class LogoutComponent implements OnInit {
   cerrarSesion() {
     sessionStorage.setItem('currentUser', 'null');
     this.modoEdit = false;
-    alert('Se ha cerrado la session');
-
+    alert('Sesion cerrada, adios!');
     window.sessionStorage.removeItem;
-
     this.router.navigate(['/']);
     window.location.reload();
   }

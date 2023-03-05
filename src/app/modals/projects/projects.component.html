@@ -15,7 +15,7 @@
                 <!--lapiz de edicion-->
                 <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
                   (click)="cargarDetalle(proyecto.id)">
-                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-pencil"></i>
                 </button>
                 <!--boton eliminar-->
                 <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0" (click)="borrar(proyecto.id)">
@@ -36,7 +36,7 @@
           <div class="mb-3">
             <span class="input-group-text">Proyecto</span>
             <input class="form-control" type="text" id="proyecto" aria-label="With textarea"
-              placeholder="ingrese proyecto" formControlName="proyecto" [ngClass]="{'is-invalid':Proyecto.errors && Proyecto.touched,
+              placeholder="Ingrese proyecto" formControlName="proyecto" [ngClass]="{'is-invalid':Proyecto.errors && Proyecto.touched,
             'is-valid':!Proyecto.errors && Proyecto.touched}">
             <div *ngIf="Proyecto?.errors && Proyecto?.touched">
               <p *ngIf="Proyecto?.hasError('required')" class="text-danger">
@@ -47,7 +47,7 @@
           <div class="mb-3">
             <span class="input-group-text">Descripcion</span>
             <textarea class="form-control" type="text" id="descripcion" aria-label="With textarea"
-              placeholder="escriba una descripcion" formControlName="descripcion" [ngClass]="{'is-invalid':Descripcion.errors && Descripcion.touched,
+              placeholder="Escriba una descripcion" formControlName="descripcion" [ngClass]="{'is-invalid':Descripcion.errors && Descripcion.touched,
              'is-valid':!Descripcion.errors && Descripcion.touched}"></textarea>
             <div *ngIf="Descripcion?.errors && Proyecto?.touched">
               <p *ngIf="Descripcion?.hasError('required')" class="text-danger">
@@ -58,12 +58,13 @@
           <div class="mb-3">
             <span class="input-group-text">Imagen</span>
             <input class="form-control" type="text" id="proyectoImagen" aria-label="With textarea"
-              placeholder="nueva imagen" formControlName="imagen">
+              placeholder="Nueva imagen" formControlName="imagen">
           </div>
           </div>
         <div class="modal-footer">
-        <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
-          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+        <button class="btn btn-outline-warning" (click)="form.reset()">Reset</button>
+          <button type="button" class="btn btn-outline-info" (click)="onCreate()"
             [disabled]="form.invalid">Guardar</button>
         </div>
       </form>

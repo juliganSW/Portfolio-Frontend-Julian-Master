@@ -1,28 +1,30 @@
 <section id="experiencia" class="experience border border-dark">
   <div class="container text-start">
     <div class="row">
-      <div class="col"></div>
-      <div class="col"></div>
-      <div class="col"></div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
       <div class="col"></div>
     </div>
-    <div class="row align-items-center">
-      <div class="col-2 mt-4">
-        <img src=".\assets\img\expeImg.svg"class="graphic" style="float: left;">
+    <div class="row d-flex align-items-center">
+      <div class="col-3">
+        <img class="img-fluid float-start" src="./assets/img/experiencia(1).jpg">
       </div>
       <div class="col-9 mt-4">
         <h1 class="expe mb-4">EXPERIENCIA LABORAL</h1>
+
         <div class="jobs mb-3" *ngFor="let experiencia of experiencias">
-          <h4><img src={{experiencia.logo}} class="rounded-circle" style="float:right;" alt="" width="20%"><span class="text">Empresa:&nbsp;</span>{{experiencia.empresa}}</h4>
+          <h4><img class="rounded-circle float-end" src={{experiencia.logo}}  alt="" width="20%"><span
+              class="text">Empresa:&nbsp;</span>{{experiencia.empresa}}</h4>
           <h4><span class="text">Puesto:&nbsp;</span>{{experiencia.puesto}}</h4>
           <h4><span class="text">Tareas:&nbsp;</span>{{experiencia.tareas}}</h4>
-          <p><span class="text">Desde:&nbsp;</span>{{experiencia.inicio}}</p>
-          <p><span class="text">Hasta:&nbsp;</span>{{experiencia.fin}}</p>
-          
+          <p><span class="text">Desde:&nbsp;</span>{{experiencia.inicio | date:"dd-MM-yyyy"}}</p>
+          <p><span class="text">Hasta:&nbsp;</span>{{experiencia.fin | date:"dd-MM-yyy"}}</p>
+          <div class="line"></div>
         </div>
+
       </div>
-      <div class="col-1">
-      </div>
+      
     </div>
   </div>
 </section>

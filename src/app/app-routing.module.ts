@@ -10,8 +10,8 @@ import { GuardGuard } from './servicios/guard.guard';
 const routes: Routes = [
   { path: 'inicio', component: InicioComponent },
   { path: 'admin', component:AdminComponent ,canActivate:[GuardGuard] },
-  { path: '', redirectTo:'inicio',pathMatch: 'full'},
- /* { path: '**', component: ErrorComponent },*/
+  { path: '', redirectTo:'/inicio',pathMatch: 'full'},
+ 
   
 ];
 

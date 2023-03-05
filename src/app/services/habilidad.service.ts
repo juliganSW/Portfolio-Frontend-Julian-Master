@@ -7,7 +7,7 @@ import { Habilidad } from '../model/habilidad';
   providedIn: 'root',
 })
 export class HabilidadService {
-  url = 'http://localhost:8080/habilidad';
+  url = 'https://portfolio-backend-xube.onrender.com/habilidad';
 
   constructor(private http: HttpClient) {}
 

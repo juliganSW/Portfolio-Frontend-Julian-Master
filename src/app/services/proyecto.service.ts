@@ -13,7 +13,7 @@ export class ProyectoService {
   //   throw new Error('Method not implemented.');
   // }
 
-  url: string = 'http://localhost:8080/proyecto';
+  url: string = 'https://portfolio-backend-xube.onrender.com/proyecto';
   updateProyecto: any;
 
   constructor(private http: HttpClient) {}

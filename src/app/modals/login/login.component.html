@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header bg">
-        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesion</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -12,7 +12,7 @@
           <div class="mb-3 row">
             <label for="user">Email</label>
             <div class="col-sm-10">
-              <input class="form-control" type="email" placeholder="ingrese email" id="inputEmail"
+              <input class="form-control" type="email" placeholder="Ingrese email" id="inputEmail"
                 formControlName="email" [(ngModel)]="persona.email"
                 [ngClass]="{'is-invalid':Email?.errors && Email?.touched,'is-valid':!Email?.errors && Email?.touched}">
               <div *ngIf="Email?.errors && Email?.touched">
@@ -27,7 +27,7 @@
           <div class="mb-3 row">
             <label for="password" class="col-sm-3 col-form-label">Contraseña</label>
             <div class="col-sm-10">
-              <input class="form-control" type="password" id="inputPassword" placeholder="ingrese contraseña"
+              <input class="form-control" type="password" id="inputPassword" placeholder="Ingrese contraseña"
                 formControlName="password" [(ngModel)]="persona.password" [ngClass]="{'is-invalid':Password?.errors && Password?.touched,
               'is-valid':!Password?.errors && Password?.touched}">
               <div *ngIf="Password?.errors && Password?.touched">
@@ -40,9 +40,9 @@
             </div>
           </div>
         </div>
-
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary" (click)="onEnviar($event)">Iniciar Sesion</button>
+         
+         <button type="submit" class="btn btn-outline-info" (click)="onEnviar($event)">Iniciar Sesion</button>
         </div>
       </form>
     </div>

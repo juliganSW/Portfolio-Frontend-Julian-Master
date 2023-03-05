@@ -1,22 +1,28 @@
 /*Seccion Acerca de mi */
 .about.border.border-dark { 
     margin-top:auto;
+   
     color:#ffffffb9;
     background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
-    box-shadow: 0.625rem 0.313rem 0.313rem #000000;   
+    box-shadow: 0.625rem 0.313rem 0.313rem #000000; 
+    margin-bottom: 1rem;
+   
 }
 .about.border.border-dark:hover {
     box-shadow: 0.625rem 0.313rem 0.313rem  #d3d3d3;   
 }
 /* foto de perfil */
-.rounded-circle.w-100.border.border-3 {
+.rounded-circle {
     width: 14rem!important;
-    margin-top: -7.5rem;
-    margin-left: -6rem;
     transform:rotate(-20deg);
     background-color:#000000;
-    border-color:#f5f5f5a1 !important;
+    border-color: #260f70!important;
+   }
+.rounded-circle:hover {
+    filter: saturate(130%);
 }
+
+
 h1 {
     color:#000000;
     text-shadow: #ffffff 0.1em 0.1em 0.1em;

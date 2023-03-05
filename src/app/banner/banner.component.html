@@ -1,8 +1,21 @@
 <section class="banner">
-  <div class="container-fluid" >
-    <h3 class="text-white text-center welcome">¡Bienvenidos!</h3>
-    <h1 class="text-white text-center welcome">
-      Soy {{ persona.nombre }} {{ persona.apellido }}</h1>
-    <h2 class="text-white text-center welcome">{{ persona.titulo }}</h2>
-  </div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+      <div class="col-3"></div>
+    </div>
+<div class="row">
+ <div class="col-2">
+      </div>
+      <div class="wrap">
+      <div class="col-10 fade-in-text">
+        <h3 class="greeting ">Hi there!</h3>
+        <h1 class="greeting ">Soy {{ persona.nombre }} {{ persona.apellido }}</h1>
+        <h2 class="greeting mb-2">{{ persona.titulo }}</h2>
+      </div> 
+      </div>
+    </div>
+   </div>
 </section>

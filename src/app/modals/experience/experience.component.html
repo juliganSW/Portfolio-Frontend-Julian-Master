@@ -14,7 +14,7 @@
                 <!--lapiz de edicion-->
                 <button type="button" class="btn btn-sm btn-outline-success pl-1 pr-1 m-0"
                   (click)="cargarDetalle(experiencia.id)">
-                  <i class="fa-solid fa-pen"></i>
+                  <i class="fa-solid fa-pencil"></i>
                 </button>
                 <!--boton eliminar-->
                 <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0"
@@ -24,7 +24,7 @@
               </span>
             </li>
           </ul>
-          <!--esto es la validacion  renderizado condicional-->
+          <!-- validacion  renderizado condicional-->
           <div class="input-group mb-3 bg-light" *ngIf="!!form.value.id">
             <div class="input-group-prepend border-0">
               <span class="input-group-text border-0" id="basic-addon1">Id:</span>
@@ -35,11 +35,11 @@
           <div class="mb-3">
             <span class="input-group-text">Empresa</span>
             <input class="form-control" type="text" id="empresa" name="empresa" aria-label="With textarea"
-              placeholder="ingrese empresa" formControlName="empresa" [ngClass]="{'is-invalid':Empresa?.errors && Empresa?.touched,
+              placeholder="Ingrese empresa" formControlName="empresa" [ngClass]="{'is-invalid':Empresa?.errors && Empresa?.touched,
             'is-valid':!Empresa?.errors && Empresa?.touched}">
             <div *ngIf="Empresa?.errors && Empresa?.touched">
               <p *ngIf="Empresa?.hasError('required')" class="text-danger">
-                Campo obligatorio 
+                Campo obligatorio
               </p>
             </div>
 
@@ -47,7 +47,7 @@
           <div class="mb-3">
             <span class="input-group-text">Puesto</span>
             <input class="form-control" type="text" id="puesto" name="puesto" aria-label="With textarea"
-              placeholder="ingrese puesto" formControlName="puesto" [ngClass]="{'is-invalid':Puesto?.errors && Puesto?.touched,
+              placeholder="Ingrese puesto" formControlName="puesto" [ngClass]="{'is-invalid':Puesto?.errors && Puesto?.touched,
             'is-valid':!Puesto?.errors && Puesto?.touched}">
             <div *ngIf="Puesto?.errors && Puesto?.touched">
               <p *ngIf="Puesto?.hasError('required')" class="text-danger">
@@ -58,7 +58,7 @@
           <div class="mb-3">
             <span class="input-group-text">Tareas</span>
             <textarea class="form-control" type="text" id="tareas" name="tareas" aria-label="With textarea"
-              placeholder="escriba una descripcion" formControlName="tareas"></textarea>
+              placeholder="Escriba una descripcion" formControlName="tareas"></textarea>
           </div>
           <div class="mb-3">
             <span class="input-group-text">Inicio</span>
@@ -67,18 +67,19 @@
           </div>
           <div class="mb-3">
             <label class="input-group-text">Fin</label>
-            <input class="form-control" type="date" id="fin" name="fin" aria-label="With textarea" formControlName="fin">
+            <input class="form-control" type="date" id="fin" name="fin" aria-label="With textarea"
+              formControlName="fin">
           </div>
           <div class="mb-3">
             <span class="input-group-text">logo</span>
             <input class="form-control" type="text" id="logo" name="logo" aria-label="With textarea"
-              placeholder="nuevo logo" formControlName="logo">
+              placeholder="Nuevo logo" formControlName="logo">
           </div>
-
         </div>
         <div class="modal-footer">
-          <button class="btn btn-outline-warning" (click)="form.reset()">RESET</button>
-          <button type="button" class="btn btn-outline-success" (click)="onCreate()"
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cerrar</button>
+          <button class="btn btn-outline-warning" (click)="form.reset()">Reset</button>
+          <button type="button" class="btn btn-outline-info" (click)="onCreate()"
             [disabled]="form.invalid">Guardar</button>
         </div>
       </form>

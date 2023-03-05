@@ -6,7 +6,7 @@ import { BehaviorSubject, map, Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AutenticacionService {
-  url = 'http://localhost:8080/persona/autenticacion/inicio';
+  url = 'https://portfolio-backend-xube.onrender.com/persona/autenticacion/inicio';
   currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http: HttpClient) {

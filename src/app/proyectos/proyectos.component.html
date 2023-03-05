@@ -7,19 +7,19 @@
       <div class="col"></div>
       <br>
     </div>
-    <div class="row align-items-center mb-3">
-      <div class="col-2">
-        <img src=".\assets\img\proImg.svg" class="graphic">
-      </div>
-      <div class="col-9">
+    <div class="row d-flex align-items-center mb-3">
+      <div class="col-3">
+        <img class="img-fluid float-start" src="./assets/img/proyectos.jpg">
+        </div>
+      <div class="col-9 mt-4">
         <h1 class="proyectos mb-4">PROYECTOS</h1>
         <div class="proyectos" *ngFor="let proyecto of proyectos">
-            <h4>&nbsp;{{proyecto.proyecto}} <img src={{proyecto.imagen}} class="rounded-circle" style="float:right;" alt="" width=""height=""></h4>
+            <h4>&nbsp;{{proyecto.proyecto}} <img src={{proyecto.imagen}} class="rounded-circle float-end" alt="" width=""height=""></h4>
             <h5>{{proyecto.descripcion}}</h5>
+            <p></p>
           </div>
         </div>
-      <div class="col-1">
-      </div>
+      
     </div>
   </div>
 </section>
